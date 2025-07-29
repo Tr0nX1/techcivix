@@ -51,21 +51,15 @@ function App() {
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center space-x-2">
               <img 
-                src="/images/Adobe Express - file.png" 
+                src="/images/canvalogo.png" 
                 alt="TechCivix Logo" 
-                className="h-16 w-auto bg-transparent"
+                className="h-16 w-16 rounded-full bg-transparent"
                 onError={(e) => {
                   console.log('Failed to load logo');
                   e.currentTarget.style.display = 'none';
                   e.currentTarget.nextElementSibling?.classList.remove('hidden');
                 }}
               />
-              <div className="hidden">
-                <Shield className="h-8 w-8 text-cyan-400" />
-              </div>
-              <span className="text-xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-                TechCivix
-              </span>
             </div>
             
             {/* Desktop Menu */}
@@ -119,31 +113,16 @@ function App() {
               <Shield className="h-4 w-4 mr-2" />
               Cyber Smart India Initiative
             </div>
-            <div className="flex justify-center mb-6">
-              <img 
-                src="/images/Adobe Express - file.png" 
-                alt="TechCivix Logo" 
-                className="h-24 md:h-32 w-auto bg-transparent"
-                onError={(e) => {
-                  console.log('Failed to load hero logo');
-                  e.currentTarget.style.display = 'none';
-                }}
-              />
-            </div>
             <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-cyan-100 to-cyan-400 bg-clip-text text-transparent">
               TechCivix
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Empowering citizens against cyber threats through education, awareness, and real-world cybersecurity training
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-cyan-600 hover:bg-cyan-700 px-8 py-4 rounded-lg text-lg font-semibold transition-all transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25">
-                Learn More
-                <ChevronRight className="h-5 w-5 inline ml-2" />
-              </button>
-              <button className="border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-gray-900 px-8 py-4 rounded-lg text-lg font-semibold transition-all">
+            <div className="flex justify-center">
+              <a href="#portfolio" className="border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-gray-900 px-8 py-4 rounded-lg text-lg font-semibold transition-all inline-block text-center">
                 View Portfolio
-              </button>
+              </a>
             </div>
           </div>
         </div>
@@ -506,10 +485,15 @@ function App() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="flex items-center space-x-2 mb-4 md:mb-0">
-              <Shield className="h-8 w-8 text-cyan-400" />
-              <span className="text-xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-                TechCivix
-              </span>
+              <img 
+                src="/images/canvalogo.png" 
+                alt="TechCivix Logo" 
+                className="h-12 w-12 rounded-full bg-transparent"
+                onError={(e) => {
+                  console.log('Failed to load footer logo');
+                  e.currentTarget.style.display = 'none';
+                }}
+              />
             </div>
             <div className="text-gray-400 text-center md:text-right">
               <p>Building a Cyber Smart India</p>
