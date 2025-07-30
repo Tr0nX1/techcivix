@@ -156,7 +156,7 @@ const MemberDetail: React.FC<MemberDetailProps> = ({ member, onBack }) => {
             </div>
 
             {/* Contact Card */}
-            <div className="bg-gradient-to-br from-gray-800 to-gray-900 p-6 rounded-xl border border-gray-700">
+            {/* <div className="bg-gradient-to-br from-gray-800 to-gray-900 p-6 rounded-xl border border-gray-700">
               <h3 className="text-xl font-bold mb-4 text-white">Get in Touch</h3>
               <p className="text-gray-300 mb-4">
                 Interested in collaborating with {member.name} or learning more about their expertise?
@@ -164,7 +164,7 @@ const MemberDetail: React.FC<MemberDetailProps> = ({ member, onBack }) => {
               <button className="w-full bg-cyan-600 hover:bg-cyan-700 px-4 py-2 rounded-lg font-semibold transition-all transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25">
                 Contact {member.name.split(' ')[0]}
               </button>
-            </div>
+            </div> */}
 
             {/* Team Contribution */}
             <div className="bg-gradient-to-br from-gray-800 to-gray-900 p-6 rounded-xl border border-gray-700">

@@ -50,9 +50,9 @@ export const portfolioSessions: PortfolioSession[] = [
     id: 2,
     title: "Cybersecurity Awareness at Shri Balaji International School, Kanwali",
     location: "Shri Balaji International School, Kanwali (Rewari)",
-    date: "June 27, 2025",
+    date: "June 28, 2025",
     imagePath: "/images/balaji-school.jpeg",
-    shortDescription: "On June 27, 2025, Mr. Dhruv, Mr. Mahir Sharma from the Gurugram Police Cyber Security Summer Internship Batch 2025 conducted a Cyber Awareness Camp in collaboration with Rewari Cyber Police at Shri Balaji International School, Kanwali. The event was attended by the Principal and the teaching staff. The session emphasized educating school faculty on the essentials of cyber safety, including threats students may face in their digital lives. This outreach strengthened the initiative to promote cybersecurity awareness among educational institutions in Rewari.",
+    shortDescription: "On June 28, 2025, Mr. Dhruv, Mr. Mahir Sharma from the Gurugram Police Cyber Security Summer Internship Batch 2025 conducted a Cyber Awareness Camp in collaboration with Rewari Cyber Police at Shri Balaji International School, Kanwali. The event was attended by the Principal and the teaching staff. The session emphasized educating school faculty on the essentials of cyber safety, including threats students may face in their digital lives. This outreach strengthened the initiative to promote cybersecurity awareness among educational institutions in Rewari.",
     fullDetails: {
       overview: "This school outreach was part of our ongoing initiative to educate institutions about practical cybersecurity measures.",
       keyTopics: [

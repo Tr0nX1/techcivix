@@ -6,6 +6,7 @@ import SessionDetail from './components/SessionDetail';
 import MemberDetail from './components/MemberDetail';
 import ImageWithFallback from './components/ImageWithFallback';
 import Gallery from './components/Gallery';
+import CyberSecurityShield from './components/CyberSecurityShield';
 
 
 function App() {
@@ -45,15 +46,18 @@ function App() {
 
   return (
     <div className="min-h-screen bg-gray-900 text-white">
+      {/* Cybersecurity Shield */}
+      <CyberSecurityShield />
+      
       {/* Navigation */}
-      <nav className="fixed top-0 w-full bg-gray-900/95 backdrop-blur-sm border-b border-gray-700 z-50">
+      <nav className="fixed top-0 w-full bg-gradient-to-r from-cyan-900/95 via-blue-900/90 to-cyan-800/95 backdrop-blur-sm border-b border-cyan-700/50 shadow-lg shadow-cyan-900/20 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center space-x-2">
               <img 
-                src="/images/canvalogo.png" 
+                src="/images/logo3.jpeg" 
                 alt="TechCivix Logo" 
-                className="h-16 w-16 rounded-full bg-transparent"
+                className="h-10 w-10 rounded-full bg-transparent object-cover"
                 onError={(e) => {
                   console.log('Failed to load logo');
                   e.currentTarget.style.display = 'none';
@@ -106,21 +110,22 @@ function App() {
       </nav>
 
       {/* Hero Section */}
-      <section id="home" className="pt-16 min-h-screen flex items-center bg-gradient-to-br from-gray-900 via-blue-900/20 to-cyan-900/20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+      <section id="home" className="pt-16 min-h-screen flex items-center bg-gradient-to-br from-gray-900 via-blue-900/20 to-cyan-900/20 relative overflow-hidden">
+         
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative z-10">
           <div className="text-center">
-            <div className="inline-flex items-center px-4 py-2 bg-cyan-900/30 rounded-full text-cyan-300 text-sm mb-6 border border-cyan-700/50">
-              <Shield className="h-4 w-4 mr-2" />
+            <div className="inline-flex items-center px-4 py-2 bg-cyan-900/30 rounded-full text-cyan-300 text-sm mb-6 border border-cyan-700/50 backdrop-blur-sm animate-fade-in-up animate-stagger-1">
+              <Shield className="h-4 w-4 mr-2 animate-shield" />
               Cyber Smart India Initiative
             </div>
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-cyan-100 to-cyan-400 bg-clip-text text-transparent">
+            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-cyan-100 to-cyan-400 bg-clip-text text-transparent animate-fade-in-up animate-stagger-2">
               TechCivix
             </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto animate-fade-in-up animate-stagger-3">
               Empowering citizens against cyber threats through education, awareness, and real-world cybersecurity training
             </p>
-            <div className="flex justify-center">
-              <a href="#portfolio" className="border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-gray-900 px-8 py-4 rounded-lg text-lg font-semibold transition-all inline-block text-center">
+            <div className="flex justify-center animate-fade-in-up animate-stagger-4">
+              <a href="#portfolio" className="border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-gray-900 px-8 py-4 rounded-lg text-lg font-semibold transition-all inline-block text-center backdrop-blur-sm hover-lift animate-glow">
                 View Portfolio
               </a>
             </div>
@@ -129,8 +134,9 @@ function App() {
       </section>
 
       {/* Mission Section */}
-      <section id="mission" className="py-20 bg-gray-800/50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section id="mission" className="py-20 bg-gray-800/50 relative overflow-hidden">
+         
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
               Our Mission
@@ -149,8 +155,8 @@ function App() {
               { icon: AlertTriangle, title: "UPI Scams", description: "Safe digital payment practices and fraud prevention" },
               { icon: Users, title: "Job Scams", description: "Identifying legitimate employment opportunities and avoiding fake job offers" }
             ].map((threat, index) => (
-              <div key={index} className="bg-gray-800/80 p-6 rounded-xl border border-gray-700 hover:border-cyan-500/50 transition-all hover:transform hover:scale-105">
-                <threat.icon className="h-12 w-12 text-cyan-400 mb-4" />
+              <div key={index} className={`bg-gray-800/80 p-6 rounded-xl border border-gray-700 hover:border-cyan-500/50 transition-all hover:transform hover:scale-105 animate-fade-in-up animate-stagger-${index + 1} hover-lift cyber-border`}>
+                <threat.icon className="h-12 w-12 text-cyan-400 mb-4 animate-pulse-slow" />
                 <h3 className="text-xl font-semibold mb-3 text-white">{threat.title}</h3>
                 <p className="text-gray-300">{threat.description}</p>
               </div>
@@ -173,8 +179,8 @@ function App() {
 
           <div className="grid lg:grid-cols-3 gap-8">
             {/* Awareness Sessions */}
-            <div className="bg-gradient-to-br from-gray-800 to-gray-900 p-8 rounded-xl border border-gray-700 hover:border-cyan-500/50 transition-all">
-              <BookOpen className="h-12 w-12 text-cyan-400 mb-6" />
+            <div className="bg-gradient-to-br from-gray-800 to-gray-900 p-8 rounded-xl border border-gray-700 hover:border-cyan-500/50 transition-all animate-fade-in-left animate-stagger-1 hover-lift cyber-border">
+              <BookOpen className="h-12 w-12 text-cyan-400 mb-6 animate-pulse-slow" />
               <h3 className="text-2xl font-bold mb-4 text-white">Awareness Sessions</h3>
               <ul className="space-y-3 text-gray-300">
                 <li className="flex items-start">
@@ -193,8 +199,8 @@ function App() {
             </div>
 
             {/* Digital Hygiene Workshops */}
-            <div className="bg-gradient-to-br from-gray-800 to-gray-900 p-8 rounded-xl border border-gray-700 hover:border-cyan-500/50 transition-all">
-              <Shield className="h-12 w-12 text-cyan-400 mb-6" />
+            <div className="bg-gradient-to-br from-gray-800 to-gray-900 p-8 rounded-xl border border-gray-700 hover:border-cyan-500/50 transition-all animate-fade-in-up animate-stagger-2 hover-lift cyber-border">
+              <Shield className="h-12 w-12 text-cyan-400 mb-6 animate-shield" />
               <h3 className="text-2xl font-bold mb-4 text-white">Digital Hygiene Workshops</h3>
               <ul className="space-y-3 text-gray-300">
                 <li className="flex items-start">
@@ -213,8 +219,8 @@ function App() {
             </div>
 
             {/* Field Outreach */}
-            <div className="bg-gradient-to-br from-gray-800 to-gray-900 p-8 rounded-xl border border-gray-700 hover:border-cyan-500/50 transition-all">
-              <Users className="h-12 w-12 text-cyan-400 mb-6" />
+            <div className="bg-gradient-to-br from-gray-800 to-gray-900 p-8 rounded-xl border border-gray-700 hover:border-cyan-500/50 transition-all animate-fade-in-right animate-stagger-3 hover-lift cyber-border">
+              <Users className="h-12 w-12 text-cyan-400 mb-6 animate-pulse-slow" />
               <h3 className="text-2xl font-bold mb-4 text-white">Field Outreach</h3>
               <ul className="space-y-3 text-gray-300">
                 <li className="flex items-start">
@@ -239,7 +245,7 @@ function App() {
       <section id="achievements" className="py-20 bg-gray-800/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-400 to-cyan-500 bg-clip-text text-transparent">
               Recognition & Achievements
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -248,43 +254,46 @@ function App() {
           </div>
 
           <div className="grid md:grid-cols-2 gap-8 items-center">
-            <div className="bg-gradient-to-br from-gray-800 to-gray-900 p-8 rounded-xl border border-gray-700">
-              <Award className="h-16 w-16 text-yellow-400 mb-6" />
+            <div className="bg-gradient-to-br from-gray-800 to-gray-900 p-8 rounded-xl border border-gray-700 animate-fade-in-left animate-stagger-1 hover-lift cyber-border">
+              <Award className="h-16 w-16 text-yellow-400 mb-6 animate-pulse-slow" />
               <h3 className="text-2xl font-bold mb-4 text-white">GPCSII Internship Recognition</h3>
-              <p className="text-gray-300 mb-6">
-                Received appreciation letter from <strong className="text-cyan-400">ACP Prayanshu Deewan Sir</strong> and 
-                <strong className="text-cyan-400"> Rakshit Tandon Sir</strong> during our GPCSII internship. Selected from 1100+ students, 
-                only a few received this prestigious recognition on stage.
-              </p>
-              <div className="bg-cyan-900/30 border border-cyan-700/50 rounded-lg p-4">
+                             <p className="text-gray-300 mb-6">
+                 Received appreciation letter from <strong className="text-cyan-400">Sh. Priyanshu Dewan, HPS, ACP Cyber Gurugram</strong> and 
+                 <strong className="text-cyan-400"> Dr. Rakshit Tandon, Cyber Security Expert</strong> during our GPCSII internship. Selected from 1100+ students, 
+                 only a few received this prestigious recognition on stage.
+               </p>
+              <div className="bg-cyan-900/30 border border-cyan-700/50 rounded-lg p-4 animate-glow">
                 <p className="text-cyan-300 font-semibold">🏆 Elite Recognition</p>
                 <p className="text-gray-300 text-sm">Handpicked by Cyber Police leadership for outstanding performance</p>
               </div>
             </div>
 
-            <div className="space-y-6">
-              <div className="bg-gradient-to-r from-cyan-900/30 to-blue-900/30 p-6 rounded-xl border border-cyan-700/50">
-                <h4 className="text-xl font-semibold text-white mb-2">Why Choose Us?</h4>
-                <ul className="space-y-2 text-gray-300">
-                  <li className="flex items-center">
-                    <Shield className="h-5 w-5 text-cyan-400 mr-3" />
-                    Handpicked by Cyber Police leadership
-                  </li>
-                  <li className="flex items-center">
-                    <BookOpen className="h-5 w-5 text-cyan-400 mr-3" />
-                    Backed by real cases and technical knowledge
-                  </li>
-                  <li className="flex items-center">
-                    <Users className="h-5 w-5 text-cyan-400 mr-3" />
-                    Guided by experts, trained by professionals
-                  </li>
-                  <li className="flex items-center">
-                                      <Globe className="h-5 w-5 text-cyan-400 mr-3" />
-                  Building a Cyber Smart India
-                  </li>
-                </ul>
-              </div>
-            </div>
+                         <div className="space-y-6 animate-fade-in-right animate-stagger-2">
+               <div className="bg-gradient-to-r from-cyan-900/30 to-blue-900/30 p-6 rounded-xl border border-cyan-700/50 hover-lift cyber-border">
+                 <h4 className="text-xl font-semibold text-white mb-2">Why Choose Us?</h4>
+                 <ul className="space-y-2 text-gray-300 mb-6">
+                   <li className="flex items-center">
+                     <Shield className="h-5 w-5 text-cyan-400 mr-3 animate-shield" />
+                     Handpicked by Cyber Police leadership
+                   </li>
+                   <li className="flex items-center">
+                     <BookOpen className="h-5 w-5 text-cyan-400 mr-3 animate-pulse-slow" />
+                     Backed by real cases and technical knowledge
+                   </li>
+                   <li className="flex items-center">
+                     <Users className="h-5 w-5 text-cyan-400 mr-3 animate-pulse-slow" />
+                     Guided by experts, trained by professionals
+                   </li>
+                   <li className="flex items-center">
+                     <Globe className="h-5 w-5 text-cyan-400 mr-3 animate-pulse-slow" />
+                     Building a Cyber Smart India
+                   </li>
+                 </ul>
+                 <button className="bg-cyan-600 hover:bg-cyan-700 px-6 py-3 rounded-lg font-semibold transition-all transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25">
+                   Request Session
+                 </button>
+               </div>
+             </div>
           </div>
         </div>
       </section>
@@ -370,12 +379,12 @@ function App() {
           </div>
 
           <div className="text-center mt-12">
-            <div className="bg-gradient-to-r from-cyan-900/30 to-blue-900/30 p-6 rounded-xl border border-cyan-700/50 inline-block">
+            {/* <div className="bg-gradient-to-r from-cyan-900/30 to-blue-900/30 p-6 rounded-xl border border-cyan-700/50 inline-block">
               <h3 className="text-xl font-bold text-white mb-2">Our Commitment</h3>
               <p className="text-gray-300">
                 Every team member brings unique expertise and dedication to our mission of creating a Cyber Smart India
               </p>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>
@@ -421,11 +430,11 @@ function App() {
             ))}
           </div>
 
-          <div className="text-center mt-12">
+          {/* <div className="text-center mt-12">
             <p className="text-gray-400 bg-gray-800/50 inline-block px-6 py-3 rounded-lg border border-gray-700">
               📸 Click on any session card to view detailed information and photos
             </p>
-          </div>
+          </div> */}
         </div>
       </section>
 
@@ -471,7 +480,7 @@ function App() {
                     Contact us to schedule an interactive workshop tailored to your community's needs.
                   </p>
                   <button className="bg-cyan-600 hover:bg-cyan-700 px-6 py-3 rounded-lg font-semibold transition-all transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25">
-                    Request Session
+                    Join Community
                   </button>
                 </div>
               </div>
@@ -486,7 +495,7 @@ function App() {
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="flex items-center space-x-2 mb-4 md:mb-0">
               <img 
-                src="/images/canvalogo.png" 
+                src="/images/logo3.jpeg" 
                 alt="TechCivix Logo" 
                 className="h-12 w-12 rounded-full bg-transparent"
                 onError={(e) => {

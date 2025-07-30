@@ -40,7 +40,7 @@ export const teamMembers: TeamMember[] = [
     }
   },
   {
-    id: 3,
+    id: 2,
     name: "Kartik Bhattacharya",
     role: "Technical Project Manger",
     imagePath: "/images/kartik-bhattacharya.jpg",
@@ -86,6 +86,7 @@ export const teamMembers: TeamMember[] = [
   }
 ,
 
+
   {
     id: 4,
     name: "Mahir Sharma",
@@ -112,5 +113,34 @@ export const teamMembers: TeamMember[] = [
       email: "mahir286sharma@gmail.com"
     }
   },
- 
+  {
+    id: 5,
+    name: "Yashika Sharma",
+    role: "Cybersecurity Specialist",
+    imagePath: "/images/yashika.jpeg",
+    bio: "Pursuing integrated BTech MTech CSE specialization in cybersecurity from National Forensic Sciences University, Delhi. Directorate of Forensic Sciences intern and GPCSII intern with extensive cybersecurity certifications.",
+    expertise: [
+      "Cyber Forensics",
+      "Ethical Hacking",
+      "Network Security",
+      "Computer Forensics",
+      "System Administration",
+      "Network Administration"
+    ],
+    achievements: [
+      "Integrated BTech MTech CSE - Cybersecurity Specialization",
+      "Directorate of Forensic Sciences Intern",
+      "GPCSII Intern",
+      "Cyber Forensic Certification",
+      "Certified Ethical Hacker (CEH)",
+      "Computer Hacking Forensic Investigator (CHFI)",
+      "Cisco Certified Network Associate (CCNA)",
+      "Microsoft Certified Solutions Associate (MCSA)",
+      "CompTIA A+ Certification",
+      "CompTIA Network+ Certification"
+    ],
+    socialLinks: {
+      email: "yashika.sharma@nfsu.ac.in"
+    }
+  }
 ]; 

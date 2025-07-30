@@ -26,6 +26,7 @@ const Gallery: React.FC = () => {
     { id: 10, src: '/images/mahir_sharma.jpg', alt: 'Mahir Sharma Profile', category: 'Team Members' },
     { id: 11, src: '/images/kartik-bhattacharya.jpg', alt: 'Kartik Bhattacharya Profile', category: 'Team Members' },
     { id: 12, src: '/images/dhruv-got-achieve.jpeg', alt: 'Dhruv got Acknowledged by ACP Prayanshu Deewan Sir and Rakshit Tandon Sir', category: 'Achievements' },
+    { id: 13, src: '/images/yashika.jpeg', alt: 'Yashika Sharma Profile', category: 'Team Members' },
   ];
 
   const categories = ['All', 'Outreach Sessions', 'Achievements', 'Team Members'];
