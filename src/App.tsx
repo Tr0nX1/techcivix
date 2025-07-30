@@ -379,12 +379,12 @@ function App() {
           </div>
 
           <div className="text-center mt-12">
-            {/* <div className="bg-gradient-to-r from-cyan-900/30 to-blue-900/30 p-6 rounded-xl border border-cyan-700/50 inline-block">
+            <div className="bg-gradient-to-r from-cyan-900/30 to-blue-900/30 p-6 rounded-xl border border-cyan-700/50 inline-block">
               <h3 className="text-xl font-bold text-white mb-2">Our Commitment</h3>
               <p className="text-gray-300">
                 Every team member brings unique expertise and dedication to our mission of creating a Cyber Smart India
               </p>
-            </div> */}
+            </div>
           </div>
         </div>
       </section>
@@ -430,11 +430,11 @@ function App() {
             ))}
           </div>
 
-          {/* <div className="text-center mt-12">
+          <div className="text-center mt-12">
             <p className="text-gray-400 bg-gray-800/50 inline-block px-6 py-3 rounded-lg border border-gray-700">
               📸 Click on any session card to view detailed information and photos
             </p>
-          </div> */}
+          </div>
         </div>
       </section>
 
